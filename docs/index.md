@@ -2,10 +2,7 @@
 layout: page
 title: Gitlab Pages Demo
 category: pages
-navigation_weight: 1
 ---
-
-**Summary**: This page is an example of what a site might look like if it was created using the ORNL Pages automated static site service. This service leverages Git, Docker, Gitlab CI Runners, and Jekyll to allow users to maintain their own sites in Markdown or HTML through ORNL's internal GitLab services and publish those sites internally or externally. Additionally, users can choose between no authenication, XCAMS, UCAMS, or UCAMS + RSA for their sites.
 
 Let's test some code:
 
