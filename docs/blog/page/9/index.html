@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Balint Erdi's blog about Ember.js</title>
+  <meta name="author" content="Balint Erdi">
+
+  
+  <meta name="description" content="Ember.js screencasts, articles, best practice tips and more. Check out my blog and stay up-to-date on Ember.js">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNRW2Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NNRW2Q');</script>
+<!-- End Google Tag Manager -->
+
+
+  
+  <link rel="canonical" href="http://balinterdi.com/blog/page/9/index.html">
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/balinterdi" rel="alternate" title="Balint Erdi's blog about Ember.js" type="application/atom+xml">
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<script src="//load.sumome.com/" data-sumo-site-id="2f7f42a353353cbb47533e4a22a64e9c3ec9211f92d2320ff1130ad6c622ee03" async></script>
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-12299794-2', 'balinterdi.com');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body   >
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNRW2Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <header role="banner"><hgroup>
+  <h1><a href="/">I'm all about Ember.js recently</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/balinterdi" rel="home" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:balinterdi.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul role=main-navigation>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/07/12/john-doe-is-dull-the-importance-of-choosing-good-user-names-in-tests.html">John Doe Is Dull: The Importance of Choosing Good User Names in Tests</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-12T00:00:00+02:00" pubdate data-updated="true">Jul 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We, developers, have to come up with user names all the time. In this glorious, pioneer era of TDD, more than ever we have to not only enter them into text fields but write them in test files that are part of the code and thus are clearly visible and permanent.</p>
+
+<p>So it is important to give good names, but what is a good name like? I am not thinking about the semantics of the name (whether it has accented letters, or if it has two or three parts, etc.) but look at them from a very personal point of view: whether it makes you, the programmer, satisfied with your choice of names or bored with repeating the same old names you used in other projects and even in those projects, you had copied them from somewhere.</p>
+
+<p>So when writing your first test where a user is needed, stop for a moment and imagine a world which you like and which is amusing in the context of your application&#8217;s domain (like <a href="http://www.youtube.com/watch?v=F2kAnTZBnTg">philosophers playing soccer</a>, Luddites attending a technology conference, etc.). Pick some names and let the feeling that you have created something instead of just using old, boring names fill you with contentment. Whenever you need an other name, take one from your world. If you need further data (e.g date of birth) about your test users you can even do a little bit of research.</p>
+
+<p>Though investing energy in this may reduce the time you spend writing code, compared to all the hours you put into a project, it is negligible. Nurturing this &#8220;subculture&#8221; in your tests can be very entertaining so you have a good time developing and are less prone to boredom. I think it pays off. We, Ruby programmers all know how important it is to be happy while programming and the effect it has on our productivity.</p>
+
+<p>And besides, do you know of anyone who is called John Doe?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/07/10/the-hashtag-hrt-retweet-bot-gemified.html">The Hashtag (HRT) Retweet Bot Gemified</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-10T00:00:00+02:00" pubdate data-updated="true">Jul 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A very simple twitter bot that retweeted everything that was tagged by a certain tag was put together for Scotland on Rails &#8216;09. Then, <a href="http://www.jaimeiniesta.com/">Jaime Iniesta</a> adapted it for Euruko &#8216;09. I then forked from his repository, made a few simplifications and minor improvements and DRY-d its configuration.</p>
+
+<p>Maybe most importantly I then turned it into [a gem][hashtag_retweet_home] so that configuration files (including the bot&#8217;s which has the credentials for the twitter account) do not have to be included in the repository.</p>
+
+<p>I also set up <a href="http://twitter.com/budapestrb">a twitter account for the budapest.rb</a> group where an instance of the HRT bot will post any tweets that have been tagged with #budapestrb. So, my fellow budapest.rb programmers, if you have anything to say about the budapest.rb, just make sure you include the #budapestrb tag in your tweet and watch the HRT bot repeat it.</p>
+
+<p>To launch your own hashtag retweet bot, just follow the instructions in <a href="http://github.com/balinterdi/hashtag_retweet_bot">the README</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/07/03/pragmatic-thinking-and-learning-on-twitter.html">Pragmatic Thinking and Learning on Twitter</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-03T00:00:00+02:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Some of you may be aware of my grandiose plans with my twitter mini-framework named <a href="http://bucionrails.com/2009/06/22/twuckoo/">twuckoo</a>. For my part I am constantly thinking about -hopefully reasonable- ways that it could be used for the better of mankind :)</p>
+
+<p>The other part of the story is my enthusiasm with Pragmatic Programmers books. I have recently started <a href="http://pragprog.com/titles/ahptl/pragmatic-thinking-and-learning">Pragmatic Thinking and Learning</a> by Andy Hunt which is also a very good one and found the familiar &#8220;resuming card&#8221; at the end. This card sums up the wisdom of the book in short phrases just so that you can recall what you read quickly. It is a great idea and can be found in other PP books, too.</p>
+
+<p>So I asked at a PP email address which seemed to be closest to copyright questions whether I have the right to do this. To my surprise, it was the author himself, <a href="http://blog.toolshed.com/">Andy Hunt</a>, who answered me and kindly gave me permission for the book in question. (Once again, thank you, Andy!)</p>
+
+<p>So there you have it, <a href="https://twitter.com/pragthinklearn">a twitter account that will serve you an advice each day</a> just so that you can &#8220;refactor your wetware&#8221; (the subtitle of the book) and hopefully help you be a better craftsman.</p>
+
+<p>And now, my little twuckoo, on to world domination!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/07/02/installing-ruby-on-a-linode-slice.html">Installing Ruby on a Linode Slice</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-02T00:00:00+02:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To be able to experiment freely and find a store for my <a href="http://bucionrails.com/2009/06/22/twuckoo/">twuckoos</a> and other goodies I have recently purchased a Linode 360 slice and had Ubuntu 9.04 installed on it. Next thing was setting up ruby (ruby 1.8.6, to be precise).</p>
+
+<p>When deciding about how to install ruby, in part I wanted to have flexibility but mostly I wanted to feel like I am a professional sysadmin for some hours so I balked at pre-built ruby packages and went with the roll-your-own approach. I&#8217;ll summarize below the process and some pitfalls I encountered so it might help someone.</p>
+
+<h2>Some basic tools</h2>
+
+
+<p>First, you will need wget (or curl) to download the sources you will need along the way, so:</p>
+
+<pre lang="bash">$ sudo apt-get install wget</pre>
+
+
+<p>Also, before you stare dumbly at the screen (like I did) wondering why can&#8217;t the stupid machine run make when the Makefile is clearly there in the directory , don&#8217;t forget to install make:</p>
+
+<pre lang="bash">$ sudo apt-get install make</pre>
+
+
+<h2>Updating the package repos</h2>
+
+
+<p>Plus, since we&#8217;ll be installing packages that are found in the &#8220;universe&#8221; namespace (or whatever it is called) you should uncomment the below two lines in /etc/apt/sources.list :</p>
+
+<pre lang="bash">deb http://us.archive.ubuntu.com/ubuntu/ jaunty universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ jaunty universe</pre>
+
+
+<p>&#8230; and then update your package index:</p>
+
+<pre lang="bash">$ sudo apt-get update</pre>
+
+
+<h2>Installing some packages ruby needs</h2>
+
+
+<p>Before we download and build ruby, however, it is recommendable to have the zlib and openssl libraries so ruby can already bind to them. This is one of the things that is a lot easier to see with hindsight, but here I am, blogging this to you:</p>
+
+<pre lang="bash">$ sudo apt-get install zlib1g zlib1g-dev zlibc
+$ sudo apt-get install openssl</pre>
+
+
+<p>It turns out from <a href="http://www.ruby-forum.com/topic/71774">this thread</a>, that the zlib bindings are part of ruby since 1.8.6 so you will not need the libzlib-ruby package.</p>
+
+<p>Now, on to ruby itself.</p>
+
+<h2>Ruby &amp; Rubygems</h2>
+
+
+<pre lang="bash">$ wget ftp://ftp.ruby-lang.org/pub/ruby/ruby-1.8.6-p369.tar.bz2
+(untar and cd to new directory)
+$ ./configure
+configure: error: no acceptable C compiler found in $PATH</pre>
+
+
+<p>Piece of cake:</p>
+
+<pre lang="bash">$ sudo apt-get install gcc
+$ ./configure
+configure: error: in `/home/balint/ruby-1.8.6-p369':
+configure: error: C compiler cannot create executables
+See `config.log' for more details.</pre>
+
+
+<p>A bit harder, but I have quickly found the answer <a href="http://ubuntuforums.org/showthread.php?t=17033">here</a>, and then did:</p>
+
+<pre lang="bash">$ sudo apt-get install libc6-dev g++
+$ ./configure
+$ make
+$ sudo make install
+$ ruby -e "p 'hello from linode slice'"
+"hello from linode slice"</pre>
+
+
+<p>Rolling!</p>
+
+<p>However, we all know that a ruby installation without gems is a toothless tiger (lion?) so we&#8217;ll install rubygems last, first downloading the source, and then installing it:</p>
+
+<pre lang="bash">$ wget http://rubyforge.org/frs/download.php/57643/rubygems-1.3.4.tgz
+(untar and cd to new directory)
+$ sudo ruby setup.rb</pre>
+
+
+<p>If you want to use gems stored on github (and you probably do) it is convenient to add the gem github repository to your gem sources:</p>
+
+<pre lang="bash">$ gem source -a http://gems.github.com
+$ sudo gem install balinterdi-twuckoo</pre>
+
+
+<p>Ok, that&#8217;s all. I hope you have found this useful.</p>
+
+<hr /><em>Note:</em>
+
+
+<p>If you receive an error message similar to the following when trying to install a gem:</p>
+
+<pre lang="bash">/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require': no such file to load -- zlib (LoadError)</pre>
+
+
+<p>Then you need to install the appropriate lib package and recompile ruby. Go to the directory where you unpacked the ruby source to and do:</p>
+
+<pre lang="bash">$ make clean
+$ make
+$ sudo make install</pre>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/06/22/twuckoo-my-twitter-mini-framework.html">Twuckoo - My Twitter Mini Framework</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-22T00:00:00+02:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am reading Andy Hunt&#8217;s excellent Pragmatic Thinking and Learning book. There is a section about so called &#8220;oblique strategies&#8221;, short, mysterious phrases that exercise your mind and make you look at problems from another perspective (e.g &#8220;repetition is a form of change&#8221;).</p>
+
+<p>The suggested intake was once a day and there was a free application that did just this for Apple computers. However, the application was so outdated that I could no longer run it on my laptop. So, I set out to write that application and after a bit of thinking decided to make a twitter account where I (&#8220;I&#8221; meaning a script that I wrote :) ) would post an oblique strategy each day and then just follow that account. This way, I can also spread the knowledge around.</p>
+
+<p>Thus <a title="Twuckoo" href="http://github.com/balinterdi/twuckoo/tree/master">Twuckoo</a> was born. Twuckoo is a simple program (relying on <a href="http://github.com/cjohansen/twibot/tree/master">twibot</a> for communication with twitter) that lets you periodically post a message on a twitter account. It can fetch the messages from a file, from a database, from the web or whereever you want it to retrieve them from. Its very modular in nature so it delegates the task of getting the next message to twitter and storing the posts to the module. here is currently one generic module, the one that fetches them from a file, and one that fetches them from wikipedia&#8217;s main page. I strongly hope that it is very easy for you to write your own module for your own purpose. Twuckoo aims to follow the &#8220;provide-what&#8217;s-needed-and-then-just-get-out-of-the-way&#8221; principle. Go check out <a href="http://github.com/balinterdi/twuckoo/tree/master">the README</a> for further details.</p>
+
+<p>It&#8217;s quite easy to install and run. You can find an example for the file-fetcher module at <a href="http://twitter.com/daily_oblique">http://twitter.com/daily_oblique</a> and <a href="http://twitter.com/wikipedia_tfa">http://twitter.com/wikipedia_tfa</a> grabs &#8220;Today&#8217;s Featured Article&#8221; from wikipedia and posts the title and the link so you can grow a little wiser each day :)</p>
+
+<p>Since it is modular it&#8217;s very extensible. I kept the API very simple so writing modules should be a piece of cake. Each module has to define the following methods:</p>
+
+<ol>
+<li><strong>load_tweets</strong> Loads the messages that can be twittered.</li>
+<li><strong>next</strong> Gets the next message that will be posted.</li>
+<li><strong>store</strong> Store the tweet after it had been posted.</li>
+</ol>
+
+
+<p>Once more, I encourage you to scan through <a href="http://github.com/balinterdi/twuckoo/">the README</a>, devise your own module and let me know about it. Any feedback is very welcome.</p>
+
+<p><em>Note:</em> For my Hungarian-speaking readers, I gave a <a href="http://docs.google.com/Presentation?id=dccxt9fm_3g8nf5fm5">lightning talk about twuckoo</a> at the latest budapest.rb meetup.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/04/27/upstream-or-downstream.html">Upstream or Downstream?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-27T00:00:00+02:00" pubdate data-updated="true">Apr 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>With the proliferation of <a href="http://chneukirchen.org/blog/archive/2007/02/introducing-rack.html">middleware applications</a> the mentions of upstream and downstream servers has intensified so I decided to get to the end of this and find out what exactly an upstream server is. I first looked up <a href="http://en.wikipedia.org/wiki/Upstream_server">wikipedia</a>:</p>
+
+<blockquote>
+In <a title="Computer networking" href="http://en.wikipedia.org/wiki/Computer_networking">computer networking</a>, <strong>upstream server</strong> refers to a <a title="Server (computing)" href="http://en.wikipedia.org/wiki/Server_(computing)">server</a> that provides service to another server. In other words, upstream server is a server that is located higher in the <a title="Hierarchy" href="http://en.wikipedia.org/wiki/Hierarchy">hierarchy</a> of servers.
+</blockquote>
+
+
+<p>Ok, so based on this simplistic definition, a sketch of a request&#8217;s route to the application server and the response back can be illustrated like this:</p>
+
+<p><img src="http://bucionrails.com/wp-content/uploads/2009/04/request-stack.jpg" border="0" /></p>
+
+<p>In this drawing, the middleware is an upstream server to the underlying application since it provides a service to it (be it caching, url mapping, exception handling and <a href="http://github.com/rack/rack-contrib/tree/master">plenty of others</a>).</p>
+
+<p>So now with my definition established, I was looking for examples in the wild that support it. <a href="http://mwrc2009.confreaks.com/13-mar-2009-11-05-in-a-world-of-middleware-who-needs-monolithic-applications-jon-crosby.html">Jon Crosby&#8217;s excellent presentation</a> at the MountainWest Ruby Conference used upstream in this context as far as I remember. Check one.</p>
+
+<p>Browsing the source code of <a href="http://github.com/rtomayko/rack-cache/tree/master">rack-cache</a> -which, by the way, I strongly encourage you to do if you want to understand caching (better) or just like the look of clean Ruby code- I realized Ryan Tomayko&#8217;s definition of upstream coincides with the above one since he uses downstream in the code to refer to the component/application below the rack-cache component. Check two.</p>
+
+<p>I recently set up an nginx web server as a front end server to a mongrel cluster that runs a Rails application. Ok, so in this case, the nginx server must be the upstream server since requests hit there first and then are passed to the mongrels. One must hear the sound of collapse of cards in my head when I saw the following <a href="http://wiki.nginx.org/NginxHttpUpstreamModule">nginx directive</a>:</p>
+
+<div>
+  <pre><code class='bash'>upstream production_mongrels {
+  server 127.0.0.1:8000;
+  server 127.0.0.1:8001;
+  server 127.0.0.1:8002;
+}</code></pre>
+</div>
+
+
+<p>Hmm, what? Nginx is above the component it provides a load-balancing service to so by any -ok, by my- definition the directive should say &#8220;downstream&#8221; and not &#8220;upstream&#8221;.</p>
+
+<p>I realize that the request arrow on the diagram moving from top to bottom is a matter of convention and that it probably correlates with the fact that most languages write from the top to the bottom. Nevertheless, as far as I know Nginx is made by a Russian guy and Russians write top to bottom, too, so he should still use &#8220;downstream&#8221; for the directive, now shouldn&#8217;t he? Or did he simply start to sketch up boxes and arrows from bottom to top for the sake of it when designing his web server?</p>
+
+<p>Summing up, I think the above described convention is the common one but since it is not standardized there will always be people and software that uses it the other way around. I am not overly confident though, so please tell me about your definition or just point to examples which support or contradict mine.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/03/25/finding-missing-i18n-translations-with-missing_t.html">Finding Missing I18n Translations With Missing_t</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-25T00:00:00+01:00" pubdate data-updated="true">Mar 25<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A recurring problem in an internationalized Rails project is to see which translations are missing. You could go through all the pages looking for &#8220;translation missing: en, user, new&#8221; texts. That, however is very tedious and error prone. There may be some texts you don&#8217;t even see that are missing translation. (like a title of an image).</p>
+
+<p>A better solution is to write a program that finds these. So that&#8217;s what I did. I gave it a very imaginative name: <a href="http://github.com/balinterdi/missing_t/tree/master">missing_t</a>. It&#8217;s darn simple. You first have to install the gem:</p>
+
+<pre lang="bash">
+gem install balinterdi-missing_t  
+</pre>
+
+
+<p>and then from the root of your Rails app you type:</p>
+
+<pre lang="bash">
+missing_t
+</pre>
+
+
+<p>You will see all the I18n strings that do not have translations along with the file they were found in. If you want to restrict your search for a specific language, you provide its language code as the first parameter, like so:</p>
+
+<pre lang="bash">
+missing_t fr
+</pre>
+
+
+<p>For a bit more detailed description, <a href="http://github.com/balinterdi/missing_t/tree/master">see the README</a>.</p>
+
+<p>Go ahead, give it a try, your app has the right to speak all those beautiful languages out there!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/03/17/thrifty-track-your-expenses-easily.html">Thrifty - Track Your Expenses Easily</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-17T00:00:00+01:00" pubdate data-updated="true">Mar 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Thrifty is a simple application I have written (and am still writing) in Sinatra that tracks your expenses. You can quickly record each spending you make and assign tags to them so you can group your expenditures easily. You can then see how much you spend in different categories (by tags) possibly narrowed down to a given date interval.</p>
+
+<p>Anyway, a web app is all about interaction so give it a try <a href="http://thrifty.heroku.com">on the test site</a> or download it from <a href="http://github.com/balinterdi/thrifty">its github repo</a> and run it locally. You&#8217;ll also find a somewhat detailed README there.</p>
+
+<p>This is a very early release so I&#8217;d appreciate any kind of feedback, be it a bug report, a comment on bad UI or anything you might find worthwhile sharing.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/03/12/plans-for-2009-contribute-more-to-open-source-projects.html">Plans for 2009 - Contribute (More) to Open Source Projects</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-12T00:00:00+01:00" pubdate data-updated="true">Mar 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At the start of 2009 my friend Jaime <a href="http://www.jaimeiniesta.com/2009/01/07/mi-resumen-del-2008">resumed his previous year</a> and proposed me to do the same. It seemed a really good idea but somehow it still died down.</p>
+
+<p>I know it&#8217;s March now but I reckon it&#8217;s still ok to do this until December :) I&#8217;ll attempt to write a mini-series of posts about not so much what I did in 2008 but rather what I would like to achieve in 2009.</p>
+
+<p>When I started to work full-time with Ruby I also realized the vast possibilities and magnetism of open source projects. I could -and still can- spend hours browsing among different projects on github, peeping into their code, reading related articles, etc.</p>
+
+<p>So when I set out for this journey one of my tasks naturally became to regularly contribute to a &#8220;serious&#8221; open source project. When I got acquainted with Merb I also got to know <a href="http://datamapper.org/doku.php">DataMapper</a>, its default ORM. I admired its elegance and coherence and the more I knew of it the more I liked it. So when the maintainer position of a dm-more gem, <a href="#dm-constraints">dm-constraints*</a> seemed to be up for grabs I took the opportunity.</p>
+
+<p>That was in December and since then I sent in a few patches and merged changes implemented by others. (which I realized could sometimes be a lot more difficult than writing code :) ). I like to do this and have learned -and probably will learn- a lot so one of my plans for 2009 is to continue with dm-constraints and maybe find other open source projects I could contribute to on a regular basis.</p>
+
+<p>So, if you happen to use DataMapper, which <a href="http://bucionrails.com/2009/02/12/why-i-love-datamapper/">I strongly encourage you to do</a>, and find a bug related to foreign-key constraints, <a href="http://datamapper.lighthouseapp.com/projects/20609-datamapper">file a ticket</a> and assign it directly to me (Balint Erdi). And/or start contributing!</p>
+
+<h3>Notes</h3>
+
+
+
+
+<p id="dm-constraints">* Dm-more is the meta package that contains everything outside the core functions of DataMapper. Dm-constraints deals with foreign key constraints. If you are familiar with ActiveRecord, it is basically the options you specify with :dependent on an association.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/03/12/easily-quote-passage-with-mail-in-a-reply.html">Easily Quote Passage With Mail in a Reply</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-12T00:00:00+01:00" pubdate data-updated="true">Mar 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>That was too long to twitter, so here it goes.</p>
+
+<p>If you use Mail (OS-X) when replying to a message you can select some text in the email you want to reply to and then hit reply. The new email will only include the text you selected so you don&#8217;t have to delete all the lines you don&#8217;t need. I hope someone finds this useful, I really do.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/10/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/8/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Master Authentication in Ember</h1>
+  <div>
+    <a href="https://www.embermeetup.com/rock-and-roll-ember/?utm_source=balinterdi.com&utm_medium=sidebar&utm_campaign=rarwe-auth-workshop" style="text-decoration:none">
+      <img src="/images/RARE-Gabby.svg" alt="GEM Authentication workshop" title="GEM Authentication workshop" />
+    </a>
+  </div>
+</section>
+<section>
+  <h1>Learn Ember from the most up-to-date book</h1>
+  <div>
+    <a href="http://rockandrollwithemberjs.com/?utm_source=my-blog&utm_medium=sidebar&utm_campaign=rarwe-book" style="text-decoration:none">
+      <img src="/images/rarwe-book.jpg" alt="Rock and Roll with Ember.js" title="Rock and Roll with Ember.js" />
+    </a>
+  </div>
+</section>
+<section>
+  <h1>Contact</h1>
+  <div style="margin-top:10px">
+    I do Ember.js consulting. If you have a project that needs help, <a href="mailto:balint@balinterdi.com">contact me</a> and let&#8217;s start talking.
+  </div>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2016/11/29/two-way-symmetric-relationships-in-ember-with-jsonapi-part-2.html">Two-way symmetric relationships in Ember with JSON API - Part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2016/11/17/two-way-symmetric-relationships-in-ember-with-jsonapi-part-1.html">Two-way symmetric relationships in Ember with JSON API - Part 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2016/11/16/rock-and-roll-with-ember-dot-js-2-dot-9-is-released.html">Rock and Roll with Ember.js 2.9 is released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2016/11/11/enable-fastboot-in-your-ember-app.html">Enable FastBoot in your Ember app</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2016/10/17/continuous-visual-integration-for-ember-apps.html">Continuous Visual Integration for Ember apps</a>
+      </li>
+    
+  </ul>
+</section>
+<section class="codementor">
+  <script data-codementor="balint" data-style="button" data-theme="dark" src="https://cdn.codementor.io/d/badge.js"></script>
+</section>
+
+
+<section>
+  
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/baaz" class="twitter-follow-button" data-show-count="false">Follow @baaz</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Balint Erdi -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'codigoergosum';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'https://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<script src="/javascripts/app.js"></script>
+
+
+
+
+</body>
+</html>
