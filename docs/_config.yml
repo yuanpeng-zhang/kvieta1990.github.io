@@ -41,3 +41,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+staticman_url: https://api.staticman.net/v3/entry/github/Kvieta1990/kvieta1990.github.io/master/comments
